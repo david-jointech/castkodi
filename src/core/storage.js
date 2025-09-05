@@ -53,6 +53,7 @@ export const initialize = async () => {
         "menu-contexts": menuContexts,
         "youtube-playlist": "playlist",
         "youtube-order": "default",
+        "invidious-instances": "",
     });
 };
 

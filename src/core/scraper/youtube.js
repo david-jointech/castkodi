@@ -123,11 +123,13 @@ const actionVideo = async ({ searchParams }, _metadata, { incognito }) => {
 
     return undefined;
 };
+const invidiousInstances = await browser.storage.local.get(["invidious-instances"]);
 export const extractVideo = matchPattern(
     actionVideo,
     "*://youtube.com/watch*",
     "*://*.youtube.com/watch*",
     "*://invidio.us/watch*",
+    invidiousInstances["invidious-instances"] + "/watch*"
 );
 
 /**
